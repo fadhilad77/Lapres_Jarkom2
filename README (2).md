@@ -115,29 +115,29 @@ apt-get update
 apt-get install bind9 -y
 
 echo '
-zone "arjuna.e02.com" {
+zone "arjuna.e03.com" {
         type master;
-        file "/etc/bind/jarkom/arjuna.e02.com";
+        file "/etc/bind/jarkom/arjuna.e03.com";
 };' > /etc/bind/named.conf.local
 
 mkdir -p /etc/bind/jarkom
-cp /etc/bind/db.local /etc/bind/jarkom/arjuna.e02.com
+cp /etc/bind/db.local /etc/bind/jarkom/arjuna.e03.com
 
 echo '
 ;
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
-@       IN      SOA     arjuna.e12.com. root.arjuna.e12.com. (
+@       IN      SOA     arjuna.e03.com. root.arjuna.e03.com. (
                      2023101001         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-@       IN      NS      arjuna.e02.com.
-@       IN      A       192.207.1.4     ; IP Arjuna
-www     IN      CNAME   arjuna.e02.com.
+@       IN      NS      arjuna.e03.com.
+@       IN      A       10.38.1.4     ; IP Arjuna
+www     IN      CNAME   arjuna.e03.com.
 @       IN      AAAA    ::1' > /etc/bind/jarkom/arjuna.e02.com
 
 service bind9 restart
@@ -149,13 +149,13 @@ Gunakan IP Node Yudhistira dengan `nano /etc/resolv.conf` pada NakulaClient
 
 
 
-Lakukan `ping arjuna.e12.com -c 5` pada NakulaClient  
+Lakukan `ping arjuna.e03.com -c 5` pada NakulaClient  
 
 Hasil
 
 
 
-Lakukan `ping www.arjuna.e12.com -c 5` pada NakulaClient  
+Lakukan `ping www.arjuna.e03.com -c 5` pada NakulaClient  
 
 Hasil
 
@@ -176,30 +176,30 @@ apt-get update
 apt-get install bind9 -y
 
 echo '
-zone "arjuna.e02.com" {
+zone "arjuna.e03.com" {
         type master;
-        file "/etc/bind/jarkom/arjuna.e02.com";
+        file "/etc/bind/jarkom/arjuna.e03.com";
 };' > /etc/bind/named.conf.local
 
 mkdir -p /etc/bind/jarkom
-cp /etc/bind/db.local /etc/bind/jarkom/arjuna.e02.com
+cp /etc/bind/db.local /etc/bind/jarkom/arjuna.e03.com
 
 echo '
 ;
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
-@       IN      SOA     arjuna.e02.com. root.arjuna.e12.com. (
+@       IN      SOA     arjuna.e03.com. root.arjuna.e03.com. (
                      2023101001         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-@       IN      NS      arjuna.e02.com.
+@       IN      NS      arjuna.e03.com.
 @       IN      A       192.207.1.4     ; IP Arjuna
-www     IN      CNAME   arjuna.e02.com.
-@       IN      AAAA    ::1' > /etc/bind/jarkom/arjuna.e02.com
+www     IN      CNAME   arjuna.e03.com.
+@       IN      AAAA    ::1' > /etc/bind/jarkom/arjuna.e03.com
 
 service bind9 restart
 ```
@@ -210,13 +210,13 @@ Gunakan IP Node Yudhistira dengan `nano /etc/resolv.conf` pada NakulaClient
 
 
 
-Lakukan `ping abimanyu.e02.com -c 5` pada NakulaClient
+Lakukan `ping abimanyu.e03.com -c 5` pada NakulaClient
 
 Hasil
 
 
 
-Lakukan `ping www.abimanyu.e02.com -c 5` pada NakulaClient
+Lakukan `ping www.abimanyu.e03.com -c 5` pada NakulaClient
 
 Hasil
 
@@ -238,24 +238,24 @@ echo '
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
-@       IN      SOA     abimanyu.e02.com. root.abimanyu.e02.com. (
+@       IN      SOA     abimanyu.e03.com. root.abimanyu.e03.com. (
                      2023101001         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-@       IN      NS      abimanyu.e12.com.
-@       IN      A       192.207.3.3     ; IP Abimanyu
-www     IN      CNAME   abimanyu.e12.com.
-parikesit IN    A       192.207.3.3     ; IP Abimanyu
+@       IN      NS      abimanyu.e03.com.
+@       IN      A       10.38.3.3     ; IP Abimanyu
+www     IN      CNAME   abimanyu.e03.com.
+parikesit IN    A       10.38.3.3     ; IP Abimanyu
 @       IN      AAAA    ::1
-' > /etc/bind/jarkom/abimanyu.e02.com
+' > /etc/bind/jarkom/abimanyu.e03.com
 
 service bind9 restart
 ```
 
-Lakukan `ping parikesit.abimanyu.e02.com -c 5` pada NakulaClient
+Lakukan `ping parikesit.abimanyu.e03.com -c 5` pada NakulaClient
 
 Hasil
 
@@ -274,27 +274,27 @@ Lakukan `nano no5.sh` pada YudhistiraClient
 #!/bin/bash
 
 echo '
-zone "3.207.192.in-addr.arpa" {
+zone "3.38.10.in-addr.arpa" {
     type master;
-    file "/etc/bind/jarkom/3.207.192.in-addr.arpa";
+    file "/etc/bind/jarkom/3.38.10.in-addr.arpa";
 };' >> /etc/bind/named.conf.local
 
-cp /etc/bind/db.local /etc/bind/jarkom/3.207.192.in-addr.arpa
+cp /etc/bind/db.local /etc/bind/jarkom/3.38.10.in-addr.arpa
 
 echo '
 ;
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
-@       IN      SOA     abimanyu.e02.com. root.abimanyu.e02.com. (
+@       IN      SOA     abimanyu.e03.com. root.abimanyu.e03.com. (
                      2023101001         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-3.207.192.in-addr.arpa. IN      NS      abimanyu.e02.com.
-3                       IN      PTR     abimanyu.e02.com.       ; Byte ke-4 IP Abimanyu' > /etc/bind/jarkom/3.207.192.in-addr.arpa
+3.38.10.in-addr.arpa. IN      NS      abimanyu.e03.com.
+3                       IN      PTR     abimanyu.e03.com.       ; Byte ke-4 IP Abimanyu' > /etc/bind/jarkom/3.38.10.in-addr.arpa
 
 service bind9 restart
 ```
@@ -303,7 +303,7 @@ Lakukan pengecekan pada addres yang dimiliki abimanyu
 
 
 
-Lakukan `host -t PTR 192.207.3.3` pada NakulaClient
+Lakukan `host -t PTR 10.38.3.3` pada NakulaClient
 
 Hasil
 
@@ -321,24 +321,24 @@ Lakukan `nano no6.sh` pada YudhistiraClient
 #!/bin/bash
 
 echo '
-zone "arjuna.e02.com" {
+zone "arjuna.e03.com" {
         type master;
-        also-notify { 192.207.2.2; }; // IP WerkudaraDNSSlave
-        allow-transfer { 192.207.2.2; }; // IP WerkudaraDNSSlave
-        file "/etc/bind/jarkom/arjuna.e02.com";
+        also-notify { 10.38.2.2; }; // IP WerkudaraDNSSlave
+        allow-transfer { 10.38.2.2; }; // IP WerkudaraDNSSlave
+        file "/etc/bind/jarkom/arjuna.e03.com";
 };
 
 zone "abimanyu.e02.com" {
     type master;
     notify yes;
-    also-notify { 192.207.2.2; }; // IP WerkudaraDNSSlave
-    allow-transfer { 192.207.2.2; }; // IP WerkudaraDNSSlave
-    file "/etc/bind/jarkom/abimanyu.e02.com";
+    also-notify { 10.38.2.2; }; // IP WerkudaraDNSSlave
+    allow-transfer { 10.38.2.2; }; // IP WerkudaraDNSSlave
+    file "/etc/bind/jarkom/abimanyu.e03.com";
 };
 
-zone "2.207.192.in-addr.arpa" {
+zone "2.38.10.in-addr.arpa" {
     type master;
-    file "/etc/bind/jarkom/2.207.192.in-addr.arpa";
+    file "/etc/bind/jarkom/2.38.10.in-addr.arpa";
 };' > /etc/bind/named.conf.local
 
 service bind9 restart
@@ -355,16 +355,16 @@ apt-get update
 apt-get install bind9 -y
 
 echo '
-zone "arjuna.e02.com" {
+zone "arjuna.e03.com" {
     type slave;
-    masters { 192.207.2.3; }; // IP Yudhis
-    file "/var/lib/bind/arjuna.e12.com";
+    masters { 10.38.2.3; }; // IP Yudhis
+    file "/var/lib/bind/arjuna.e03.com";
 };
 
 zone "abimanyu.e12.com" {
     type slave;
-    masters { 192.207.2.3; }; // IP Yudhis
-    file "/var/lib/bind/abimanyu.e02.com";
+    masters { 10.38.2.3; }; // IP Yudhis
+    file "/var/lib/bind/abimanyu.e03.com";
 };
 ' > /etc/bind/named.conf.local
 
@@ -377,13 +377,13 @@ Hasil
 
 
 
-Lakukan `ping arjuna.e02.com -c 5` pada NakulaClient
+Lakukan `ping arjuna.e03.com -c 5` pada NakulaClient
 
 Hasil
 
 
 
-Lakukan `ping www.arjuna.e12.com` pada NakulaClient
+Lakukan `ping www.arjuna.e03.com` pada NakulaClient
 
 Hasil
 
@@ -407,20 +407,20 @@ echo ';
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
-@       IN      SOA     abimanyu.e02.com. root.abimanyu.e02.com. (
+@       IN      SOA     abimanyu.e03.com. root.abimanyu.e03.com. (
                      2023101001         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-@       IN      NS      abimanyu.e12.com.
-@       IN      A       192.207.3.3     ; IP Abimanyu
-www     IN      CNAME   abimanyu.e12.com.
-parikesit IN    A       192.207.3.3     ; IP Abimanyu
-ns1     IN      A       192.207.2.2     ; IP Werkudara
+@       IN      NS      abimanyu.e03.com.
+@       IN      A       10.38.3.3     ; IP Abimanyu
+www     IN      CNAME   abimanyu.e03.com.
+parikesit IN    A       10.38.3.3     ; IP Abimanyu
+ns1     IN      A       10.38.2.2     ; IP Werkudara
 baratayuda IN   NS      ns1
-@       IN      AAAA    ::1' > /etc/bind/jarkom/abimanyu.e02.com
+@       IN      AAAA    ::1' > /etc/bind/jarkom/abimanyu.e03.com
 
 service bind9 restart
 
@@ -451,20 +451,20 @@ echo 'options {
 };' > /etc/bind/named.conf.options
 
 echo '
-zone "arjuna.e02.com" {
+zone "arjuna.e03.com" {
        type master;
-       file "/etc/bind/jarkom/arjuna.e02.com";
+       file "/etc/bind/jarkom/arjuna.e03.com";
 };
 
-zone "abimanyu.e02.com" {
+zone "abimanyu.e03.com" {
     type master;
-    file "/etc/bind/jarkom/abimanyu.e02.com";
-    allow-transfer { 192.207.2.2; }; // IP Werkudara
+    file "/etc/bind/jarkom/abimanyu.e03.com";
+    allow-transfer { 10.38.2.2; }; // IP Werkudara
 };
 
-zone "2.207.192.in-addr.arpa" {
+zone "2.38.10.in-addr.arpa" {
     type master;
-    file "/etc/bind/jarkom/2.207.192.in-addr.arpa";
+    file "/etc/bind/jarkom/2.38.10.in-addr.arpa";
 };' > /etc/bind/named.conf.local
 
 service bind9 restart
@@ -508,58 +508,58 @@ echo 'options {
 };' > /etc/bind/named.conf.options
 
 echo '
-zone "arjuna.e02.com" {
+zone "arjuna.e03.com" {
     type slave;
-    masters { 192.207.2.3; }; // IP Yudhis
+    masters { 10.38.2.3; }; // IP Yudhis
     file "/var/lib/bind/arjuna.e02.com";
 };
 
-zone "abimanyu.e02.com" {
+zone "abimanyu.e03.com" {
     type slave;
-    masters { 192.207.2.3; }; // IP Yudhis
-    file "/var/lib/bind/abimanyu.e02.com";
+    masters { 10.38.2.3; }; // IP Yudhis
+    file "/var/lib/bind/abimanyu.e03.com";
 };
 
-zone "baratayuda.abimanyu.e02.com" {
+zone "baratayuda.abimanyu.e03.com" {
     type master;
-    file "/etc/bind/baratayuda/baratayuda.abimanyu.e02.com";
+    file "/etc/bind/baratayuda/baratayuda.abimanyu.e03.com";
 };' > /etc/bind/named.conf.local
 
 mkdir -p /etc/bind/baratayuda
-cp /etc/bind/db.local /etc/bind/baratayuda/baratayuda.abimanyu.e02.com
+cp /etc/bind/db.local /etc/bind/baratayuda/baratayuda.abimanyu.e03.com
 
 echo '
 ;
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
-@       IN      SOA     baratayuda.abimanyu.e02.com. root.baratayuda.abimanyu.e02.com. (
+@       IN      SOA     baratayuda.abimanyu.e03.com. root.baratayuda.abimanyu.e03.com. (
                      2023101001         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-@       IN      NS      baratayuda.abimanyu.e02.com.
-@       IN      A       192.207.3.3     ; IP Abimanyu
-www     IN      CNAME   baratayuda.abimanyu.e12.com.' > /etc/bind/baratayuda/baratayuda.abimanyu.e12.com
+@       IN      NS      baratayuda.abimanyu.e03.com.
+@       IN      A       10.38.3.3     ; IP Abimanyu
+www     IN      CNAME   baratayuda.abimanyu.e03.com.' > /etc/bind/baratayuda/baratayuda.abimanyu.e03.com
 
 service bind9 restart
 ```
 
-Lakukan `ping baratayuda.abimanyu.e02.com` pada Nakulaclient
+Lakukan `ping baratayuda.abimanyu.e03.com` pada Nakulaclient
 
 Hasil
 
 
 
-Lakukan `ping www.baratayuda.abimanyu.e12.com` pada Nakulaclient
+Lakukan `ping www.baratayuda.abimanyu.e03.com` pada Nakulaclient
 
 Hasil
 
 
 
-Lakukan `host -t CNAME www.baratayuda.abimanyu.e02.com` pada Nakulaclient
+Lakukan `host -t CNAME www.baratayuda.abimanyu.e03.com` pada Nakulaclient
 
 Hasil
 
@@ -580,29 +580,29 @@ echo ';
 ; BIND data file for local loopback interface
 ;
 $TTL    604800
-@       IN      SOA     baratayuda.abimanyu.e02.com. root.baratayuda.abimanyu.e02.com. (
+@       IN      SOA     baratayuda.abimanyu.e03.com. root.baratayuda.abimanyu.e03.com. (
                      2023101001         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
 ;
-@       IN      NS      baratayuda.abimanyu.e12.com.
-@       IN      A       192.207.3.3     ; IP Abimanyu
-www     IN      CNAME   baratayuda.abimanyu.e12.com.
-rjp     IN      A       192.207.3.3     ; IP Abimanyu
-www.rjp IN      CNAME   rjp.baratayuda.abimanyu.e02.com.' > /etc/bind/baratayuda/baratayuda.abimanyu.e12.com
+@       IN      NS      baratayuda.abimanyu.e03.com.
+@       IN      A       10.38.3.3     ; IP Abimanyu
+www     IN      CNAME   baratayuda.abimanyu.e03.com.
+rjp     IN      A       10.38.3.3     ; IP Abimanyu
+www.rjp IN      CNAME   rjp.baratayuda.abimanyu.e03.com.' > /etc/bind/baratayuda/baratayuda.abimanyu.e03.com
 
 service bind9 restart
 ```
 
-Lakukan `ping rjp.baratayuda.abimanyu.e02.com` pada Nakulaclient
+Lakukan `ping rjp.baratayuda.abimanyu.e03.com` pada Nakulaclient
 
 Hasil
 
 
 
-Lakukan `ping www.rjp.baratayuda.abimanyu.e02.com -c 5 ` pada NakulaClient
+Lakukan `ping www.rjp.baratayuda.abimanyu.e03.com -c 5 ` pada NakulaClient
 
 Hasil
 
@@ -623,14 +623,14 @@ Pada node Arjuna, install nginx dan ubah konfigurasi file `/etc/nginx/sites-avai
 echo '
  # Default menggunakan Round Robin
  upstream myweb  {
-        server 192.207.3.2; #IP Prabukusuma
-        server 192.207.3.3; #IP Abimanyu
-        server 192.207.3.4; #IP Wisanggeni
+        server 10.38.3.2; #IP Prabukusuma
+        server 10.38.3.3; #IP Abimanyu
+        server 10.38.3.4; #IP Wisanggeni
  }
 
  server {
         listen 80;
-        server_name arjuna.e02.com www.arjuna.e02.com;
+        server_name arjuna.e03.com www.arjuna.e03.com;
 
         location / {
         proxy_pass http://myweb;
@@ -792,13 +792,13 @@ service nginx restart
 
 Untung testing, lakukan **lynx** ke setiap node worker dari **NakulaClient**.
 
-`lynx 192.207.3.2` (IP Prabukusuma)<br>
+`lynx 10.38.3.2` (IP Prabukusuma)<br>
 
 
-`lynx 192.207.3.3` (IP Abimanyu)<br>
+`lynx 10.38.3.3` (IP Abimanyu)<br>
 
 
-`lynx 192.207.3.4` (IP Wisanggeni)<br>
+`lynx 10.38.3.4` (IP Wisanggeni)<br>
 
 
 ## Soal 10
@@ -816,14 +816,14 @@ Ubah konfigurasi file `/etc/nginx/sites-available/lb-jarkom` pada node Arjuna ag
 echo '
  # Default menggunakan Round Robin
  upstream myweb  {
-        server 192.207.3.2:8001; #IP Prabukusuma
-        server 192.207.3.3:8002; #IP Abimanyu
-        server 192.207.3.4:8003; #IP Wisanggeni
+        server 10.38.3.2:8001; #IP Prabukusuma
+        server 10.38.3.3:8002; #IP Abimanyu
+        server 10.38.3.4:8003; #IP Wisanggeni
  }
 
  server {
         listen 80;
-        server_name arjuna.e02.com www.arjuna.e02.com;
+        server_name arjuna.e03.com www.arjuna.e03.com;
 
         location / {
         proxy_pass http://myweb;
@@ -956,16 +956,16 @@ service nginx restart
 
 Untuk testing, lakukan lynx IP tiap worker disertai dengan port masing-masing pada NakulaClient.
 
-`lynx 192.207.3.2:8001`<br>
+`lynx 10.38.3.2:8001`<br>
 
 
-`lynx 192.207.3.3:8002`<br>
+`lynx 10.38.3.3:8002`<br>
 
 
-`lynx 192.207.3.4:8003`<br>
+`lynx 10.38.3.4:8003`<br>
 
 
-`curl arjuna.e02.com`<br>
+`curl arjuna.e03.com`<br>
 
 
 ## Soal 11
@@ -983,14 +983,14 @@ apt-get install apache2
 
 Kemudian download dan unzip file abimanyu dari link google drive yang diberikan menggunakan command berikut.
 ```
-wget -O '/var/www/abimanyu.e02.com' 'https://drive.usercontent.google.com/download?id=1a4V23hwK9S7hQEDEcv9FL14UkkrHc-Zc'
-unzip -o /var/www/abimanyu.e02.com -d /var/www/
-mv /var/www/abimanyu.yyy.com /var/www/abimanyu.e02
-rm /var/www/abimanyu.e02.com
-rm -rf /var/www/abimanyu.e02/abimanyu.yyy.com
+wget -O '/var/www/abimanyu.e03.com' 'https://drive.usercontent.google.com/download?id=1a4V23hwK9S7hQEDEcv9FL14UkkrHc-Zc'
+unzip -o /var/www/abimanyu.e03.com -d /var/www/
+mv /var/www/abimanyu.yyy.com /var/www/abimanyu.e03
+rm /var/www/abimanyu.e03.com
+rm -rf /var/www/abimanyu.e03/abimanyu.yyy.com
 ```
 
-Lakukan konfigurasi pada file `/etc/apache2/sites-available/abimanyu.e02.com.conf` seperti berikut.
+Lakukan konfigurasi pada file `/etc/apache2/sites-available/abimanyu.e03.com.conf` seperti berikut.
 ```
 echo '
 <VirtualHost *:80>
@@ -998,36 +998,36 @@ echo '
   DocumentRoot /var/www/abimanyu.e02
 
   ServerName abimanyu.e02.com
-  ServerAlias www.abimanyu.e02.com
+  ServerAlias www.abimanyu.e03.com
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/abimanyu.e03.com.conf
 
 service apache2 start
-a2ensite abimanyu.e02.com.conf
+a2ensite abimanyu.e03.com.conf
 service apache2 restart
 ```
 
-Untuk testing, lakukan `lynx abimanyu.e02.com` pada NakulaClient.
+Untuk testing, lakukan `lynx abimanyu.e03.com` pada NakulaClient.
 
-Kami menemui permasalahan di mana `lynx abimanyu.e02.com` tidak memunculkan apa-apa, sementara `lynx abimanyu.e02.com/home.html` memunculkan pesan "Akulah Abimanyu".
+Kami menemui permasalahan di mana `lynx abimanyu.e03.com` tidak memunculkan apa-apa, sementara `lynx abimanyu.e03.com/home.html` memunculkan pesan "Akulah Abimanyu".
 
-`lynx abimanyu.e02.com`
+`lynx abimanyu.e03.com`
 
-`lynx abimanyu.e02.com/home.html`
+`lynx abimanyu.e03.com/home.html`
 
 ## Soal 12
 Setelah itu ubahlah agar url **www.abimanyu.yyy.com/index.php/home** menjadi **www.abimanyu.yyy.com/home**.
 
 ### Jawaban
-Lakukan konfigurasi pada file `/etc/apache2/sites-available/abimanyu.e02.com.conf` dengan menambahkan
+Lakukan konfigurasi pada file `/etc/apache2/sites-available/abimanyu.e03.com.conf` dengan menambahkan
 ```
-<Directory /var/www/abimanyu.e02/index.php/home>
+<Directory /var/www/abimanyu.e03/index.php/home>
         Options +Indexes
 </Directory>
 
-Alias "/home" "/var/www/abimanyu.e02/index.php/home"```
+Alias "/home" "/var/www/abimanyu.e03/index.php/home"```
 ```
 
 Seperti berikut
@@ -1039,25 +1039,25 @@ service apache2 start
 echo '
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/abimanyu.e02
+  DocumentRoot /var/www/abimanyu.e03
 
-  ServerName abimanyu.e02.com
-  ServerAlias www.abimanyu.e02.com
+  ServerName abimanyu.e03.com
+  ServerAlias www.abimanyu.e03.com
 
-  <Directory /var/www/abimanyu.e02/index.php/home>
+  <Directory /var/www/abimanyu.e03/index.php/home>
           Options +Indexes
   </Directory>
 
-  Alias "/home" "/var/www/abimanyu.e02/index.php/home"
+  Alias "/home" "/var/www/abimanyu.e03/index.php/home"
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/abimanyu.e03.com.conf
 
 service apache2 restart
 ```
 
-Untuk testing, lakukan `lynx abimanyu.e02.com/home` pada NakulaClient. Pada nomor ini kami juga menemui permasalahan berupa 404 Not Found.
+Untuk testing, lakukan `lynx abimanyu.e03.com/home` pada NakulaClient. Pada nomor ini kami juga menemui permasalahan berupa 404 Not Found.
 
 
 ## Soal 13
@@ -1068,32 +1068,32 @@ Download dan unzip file parikesit.abimanyu.
 ```
 #!/bin/bash
 
-wget -O '/var/www/parikesit.abimanyu.e02.com' 'https://drive.usercontent.google.com/download?id=1LdbYntiYVF_NVNgJis1GLCLPEGyIOreS'
-unzip -o /var/www/parikesit.abimanyu.e02.com -d /var/www/
-mv /var/www/parikesit.abimanyu.yyy.com /var/www/parikesit.abimanyu.e02
-rm /var/www/parikesit.abimanyu.e02.com
+wget -O '/var/www/parikesit.abimanyu.e03.com' 'https://drive.usercontent.google.com/download?id=1LdbYntiYVF_NVNgJis1GLCLPEGyIOreS'
+unzip -o /var/www/parikesit.abimanyu.e03.com -d /var/www/
+mv /var/www/parikesit.abimanyu.yyy.com /var/www/parikesit.abimanyu.e03
+rm /var/www/parikesit.abimanyu.e03.com
 rm -rf /var/www/parikesit.abimanyu.yyy.com
 ``` 
 
-Lalu konfigurasi file `/etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf` seperti berikut.
+Lalu konfigurasi file `/etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf` seperti berikut.
 ```
 echo '
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/parikesit.abimanyu.e02
+  DocumentRoot /var/www/parikesit.abimanyu.e03
 
-  ServerName parikesit.abimanyu.e02.com
-  ServerAlias www.parikesit.abimanyu.e02.com
+  ServerName parikesit.abimanyu.e03.com
+  ServerAlias www.parikesit.abimanyu.e03.com
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf
 
-a2ensite parikesit.abimanyu.e02.com.conf
+a2ensite parikesit.abimanyu.e03.com.conf
 service apache2 restart
 ```
 
-Untuk testing, lakukan `lynx parikesit.abimanyu.e02.com` pada NakulaClient.
+Untuk testing, lakukan `lynx parikesit.abimanyu.e03.com` pada NakulaClient.
 
 
 
@@ -1103,19 +1103,19 @@ Pada subdomain tersebut folder /public hanya dapat melakukan directory listing s
 ### Jawaban
 Tambahkan konfigurasi berikut untuk mengaktifkan directory listing pada folder /public dan mematikan directory listing pada folder /secret.
 ```
-  <Directory /var/www/parikesit.abimanyu.e02/public>
+  <Directory /var/www/parikesit.abimanyu.e03/public>
           Options +Indexes
   </Directory>
 
-  <Directory /var/www/parikesit.abimanyu.e02/secret>
+  <Directory /var/www/parikesit.abimanyu.e03/secret>
           Options -Indexes
   </Directory>
 
-  Alias "/public" "/var/www/parikesit.abimanyu.e02/public"
-  Alias "/secret" "/var/www/parikesit.abimanyu.e02/secret"
+  Alias "/public" "/var/www/parikesit.abimanyu.e03/public"
+  Alias "/secret" "/var/www/parikesit.abimanyu.e03/secret"
 ```
 
-Sehingga konfigurasi file `/etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf` menjadi seperti berikut.
+Sehingga konfigurasi file `/etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf` menjadi seperti berikut.
 ```
 #!/bin/bash
 
@@ -1124,81 +1124,81 @@ mkdir -p /var/www/parikesit.abimanyu.e02/secret
 echo '
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/parikesit.abimanyu.e02
+  DocumentRoot /var/www/parikesit.abimanyu.e03
 
-  ServerName parikesit.abimanyu.e02.com
-  ServerAlias www.parikesit.abimanyu.e02.com
+  ServerName parikesit.abimanyu.e03.com
+  ServerAlias www.parikesit.abimanyu.e03.com
 
-  <Directory /var/www/parikesit.abimanyu.e02/public>
+  <Directory /var/www/parikesit.abimanyu.e03/public>
           Options +Indexes
   </Directory>
 
-  <Directory /var/www/parikesit.abimanyu.e02/secret>
+  <Directory /var/www/parikesit.abimanyu.e03/secret>
           Options -Indexes
   </Directory>
 
-  Alias "/public" "/var/www/parikesit.abimanyu.e02/public"
-  Alias "/secret" "/var/www/parikesit.abimanyu.e02/secret"
+  Alias "/public" "/var/www/parikesit.abimanyu.e03/public"
+  Alias "/secret" "/var/www/parikesit.abimanyu.e03/secret"
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf
 
 service apache2 restart
 ```
 
-Untuk testing, lakukan `lynx parikesit.abimanyu.e02.com/public` dan `lynx parikesit.abimanyu.e02.com/secret` pada NakulaClient.
+Untuk testing, lakukan `lynx parikesit.abimanyu.e03.com/public` dan `lynx parikesit.abimanyu.e03.com/secret` pada NakulaClient.
 
-`lynx parikesit.abimanyu.e02.com/public`<br>
+`lynx parikesit.abimanyu.e03.com/public`<br>
 
 
-`lynx parikesit.abimanyu.e02.com/secret`<br>
+`lynx parikesit.abimanyu.e03.com/secret`<br>
 
 
 ## Soal 15
 Buatlah kustomisasi halaman error pada folder /error untuk mengganti error kode pada Apache. Error kode yang perlu diganti adalah 404 Not Found dan 403 Forbidden.
 
 ### Jawaban
-Tambahkan `ErrorDocument 404 /error/404.html` dan `ErrorDocument 403 /error/403.html` pada konfigurasi file `/etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf` seperti berikut.
+Tambahkan `ErrorDocument 404 /error/404.html` dan `ErrorDocument 403 /error/403.html` pada konfigurasi file `/etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf` seperti berikut.
 ```
 #!/bin/bash
 
 echo '
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/parikesit.abimanyu.e02
+  DocumentRoot /var/www/parikesit.abimanyu.e03
 
-  ServerName parikesit.abimanyu.e02.com
-  ServerAlias www.parikesit.abimanyu.e02.com
+  ServerName parikesit.abimanyu.e03.com
+  ServerAlias www.parikesit.abimanyu.e03.com
 
-  <Directory /var/www/parikesit.abimanyu.e02/public>
+  <Directory /var/www/parikesit.abimanyu.e03/public>
           Options +Indexes
   </Directory>
 
-  <Directory /var/www/parikesit.abimanyu.e02/secret>
+  <Directory /var/www/parikesit.abimanyu.e03/secret>
           Options -Indexes
   </Directory>
 
-  Alias "/public" "/var/www/parikesit.abimanyu.e02/public"
-  Alias "/secret" "/var/www/parikesit.abimanyu.e02/secret"
+  Alias "/public" "/var/www/parikesit.abimanyu.e03/public"
+  Alias "/secret" "/var/www/parikesit.abimanyu.e03/secret"
 
   ErrorDocument 404 /error/404.html
   ErrorDocument 403 /error/403.html
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf
 
 service apache2 restart
 ```
 
-Untuk testing, lakukan `lynx parikesit.abimanyu.e02.com/testerror` dan `lynx parikesit.abimanyu.e02.com/secret` pada NakulaClient.
+Untuk testing, lakukan `lynx parikesit.abimanyu.e03.com/testerror` dan `lynx parikesit.abimanyu.e03.com/secret` pada NakulaClient.
 
-`lynx parikesit.abimanyu.e02.com/testerror` (Test 404 Not Found)
+`lynx parikesit.abimanyu.e03.com/testerror` (Test 404 Not Found)
 
 
 
-`lynx parikesit.abimanyu.e02.com/secret` (Test 403 Forbidden)
+`lynx parikesit.abimanyu.e03.com/secret` (Test 403 Forbidden)
 
 
 ## Soal 16
@@ -1206,7 +1206,7 @@ Buatlah suatu konfigurasi virtual host agar file asset **www.parikesit.abimanyu.
 **www.parikesit.abimanyu.yyy.com/js** 
 
 ### Jawaban
-Tambahkan konfigurasi alias untuk direktori /js pada file `/etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf` seperti berikut.
+Tambahkan konfigurasi alias untuk direktori /js pada file `/etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf` seperti berikut.
 
 ```
 #!/bin/bash
@@ -1214,34 +1214,34 @@ Tambahkan konfigurasi alias untuk direktori /js pada file `/etc/apache2/sites-av
 echo '
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/parikesit.abimanyu.e02
+  DocumentRoot /var/www/parikesit.abimanyu.e03
 
-  ServerName parikesit.abimanyu.e02.com
-  ServerAlias www.parikesit.abimanyu.e02.com
+  ServerName parikesit.abimanyu.e03.com
+  ServerAlias www.parikesit.abimanyu.e03.com
 
-  <Directory /var/www/parikesit.abimanyu.e02/public>
+  <Directory /var/www/parikesit.abimanyu.e03/public>
           Options +Indexes
   </Directory>
 
-  <Directory /var/www/parikesit.abimanyu.e02/secret>
+  <Directory /var/www/parikesit.abimanyu.e03/secret>
           Options -Indexes
   </Directory>
 
-  Alias "/public" "/var/www/parikesit.abimanyu.e02/public"
-  Alias "/secret" "/var/www/parikesit.abimanyu.e02/secret"
-  Alias "/js" "/var/www/parikesit.abimanyu.e02/public/js"
+  Alias "/public" "/var/www/parikesit.abimanyu.e03/public"
+  Alias "/secret" "/var/www/parikesit.abimanyu.e03/secret"
+  Alias "/js" "/var/www/parikesit.abimanyu.e03/public/js"
 
   ErrorDocument 404 /error/404.html
   ErrorDocument 403 /error/403.html
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf
 
 service apache2 restart
 ```
 
-Untuk testing, lakukan `lynx parikesit.abimanyu.e02.com/js` pada NakulaClient.
+Untuk testing, lakukan `lynx parikesit.abimanyu.e03.com/js` pada NakulaClient.
 
 
 
@@ -1254,30 +1254,30 @@ Download dan unzip file rjp.baratayuda.abimanyu.
 ```
 #!/bin/bash
 
-wget -O '/var/www/rjp.baratayuda.abimanyu.e02.com' 'https://drive.usercontent.google.com/download?id=1pPSP7yIR05JhSFG67RVzgkb-VcW9vQO6'
-unzip -o /var/www/rjp.baratayuda.abimanyu.e02.com -d /var/www/
-mv /var/www/rjp.baratayuda.abimanyu.yyy.com /var/www/rjp.baratayuda.abimanyu.e02
-rm /var/www/rjp.baratayuda.abimanyu.e02.com
+wget -O '/var/www/rjp.baratayuda.abimanyu.e03.com' 'https://drive.usercontent.google.com/download?id=1pPSP7yIR05JhSFG67RVzgkb-VcW9vQO6'
+unzip -o /var/www/rjp.baratayuda.abimanyu.e03.com -d /var/www/
+mv /var/www/rjp.baratayuda.abimanyu.yyy.com /var/www/rjp.baratayuda.abimanyu.e03
+rm /var/www/rjp.baratayuda.abimanyu.e03.com
 rm -rf /var/www/rjp.baratayuda.abimanyu.yyy.com
 ```
 
-Kemudian ubah konfigurasi file `/etc/apache2/sites-available/rjp.baratayuda.abimanyu.e02.com.conf` seperti berikut.
+Kemudian ubah konfigurasi file `/etc/apache2/sites-available/rjp.baratayuda.abimanyu.e03.com.conf` seperti berikut.
 
 ```
 echo '
 <VirtualHost *:14000 *:14400>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/rjp.baratayuda.abimanyu.e02
+  DocumentRoot /var/www/rjp.baratayuda.abimanyu.e03
 
-  ServerName rjp.baratayuda.abimanyu.e02.com
-  ServerAlias www.rjp.baratayuda.abimanyu.e02.com
+  ServerName rjp.baratayuda.abimanyu.e03.com
+  ServerAlias www.rjp.baratayuda.abimanyu.e03.com
 
   ErrorDocument 404 /error/404.html
   ErrorDocument 403 /error/403.html
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/rjp.baratayuda.abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/rjp.baratayuda.abimanyu.e03.com.conf
 ```
 
 Dan tambahkan `Listen 14000` serta `Listen 14400` pada file `/etc/apache2/ports.conf` seperti berikut.
@@ -1306,7 +1306,7 @@ a2ensite rjp.baratayuda.abimanyu.e02.com.conf
 service apache2 restart
 ```
 
-Untuk testing, lakukan `lynx rjp.baratayuda.abimanyu.e02.com:14000` atau `lynx rjp.baratayuda.abimanyu.e02.com:14400` pada NakulaClient.
+Untuk testing, lakukan `lynx rjp.baratayuda.abimanyu.e03.com:14000` atau `lynx rjp.baratayuda.abimanyu.e03.com:14400` pada NakulaClient.
 
 
 
@@ -1318,7 +1318,7 @@ Apabila menggunakan port selain 14000 atau 14400, maka website tidak dapat terhu
 Untuk mengaksesnya buatlah autentikasi username berupa “Wayang” dan password “baratayudayyy” dengan yyy merupakan kode kelompok. Letakkan DocumentRoot pada /var/www/rjp.baratayuda.abimanyu.yyy.
 
 ### Jawaban
-Ubah konfigurasi file `/etc/apache2/sites-available/rjp.baratayuda.abimanyu.e02.com.conf` seperti berikut.
+Ubah konfigurasi file `/etc/apache2/sites-available/rjp.baratayuda.abimanyu.e03.com.conf` seperti berikut.
 
 ```
 #!/bin/bash
@@ -1326,12 +1326,12 @@ Ubah konfigurasi file `/etc/apache2/sites-available/rjp.baratayuda.abimanyu.e02.
 echo '
 <VirtualHost *:14000 *:14400>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/rjp.baratayuda.abimanyu.e02
+  DocumentRoot /var/www/rjp.baratayuda.abimanyu.e03
 
-  ServerName rjp.baratayuda.abimanyu.e02.com
-  ServerAlias www.rjp.baratayuda.abimanyu.e02.com
+  ServerName rjp.baratayuda.abimanyu.e03.com
+  ServerAlias www.rjp.baratayuda.abimanyu.e03.com
 
-  <Directory /var/www/rjp.baratayuda.abimanyu.e02>
+  <Directory /var/www/rjp.baratayuda.abimanyu.e03>
           AuthType Basic
           AuthName "Restricted Content"
           AuthUserFile /etc/apache2/.htpasswd
@@ -1343,7 +1343,7 @@ echo '
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/rjp.baratayuda.abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/rjp.baratayuda.abimanyu.e03.com.conf
 ```
 
 Lalu panggil command `htpasswd` berikut untuk mengautentikasi username dan password.
@@ -1351,7 +1351,7 @@ Lalu panggil command `htpasswd` berikut untuk mengautentikasi username dan passw
 htpasswd -c -b /etc/apache2/.htpasswd Wayang baratayudae02
 ```
 
-Untuk testing, lakukan `lynx rjp.baratayuda.abimanyu.e02.com:14000` atau `lynx rjp.baratayuda.abimanyu.e02.com:14400` pada NakulaClient.
+Untuk testing, lakukan `lynx rjp.baratayuda.abimanyu.e03.com:14000` atau `lynx rjp.baratayuda.abimanyu.e03.com:14400` pada NakulaClient.
 
 
 
@@ -1367,24 +1367,24 @@ Ubah konfigurasi file `/etc/apache2/sites-available/000-default.conf` seperti be
 
 echo '
 <VirtualHost *:80>
-    ServerAdmin webmaster@abimanyu.e02.com
+    ServerAdmin webmaster@abimanyu.e03.com
     DocumentRoot /var/www/html
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-    Redirect / http://www.abimanyu.e02.com/
+    Redirect / http://www.abimanyu.e03.com/
 </VirtualHost>' > /etc/apache2/sites-available/000-default.conf
 
 service apache2 restart
 ```
 
-Untuk testing, lakukan lynx IP address Abimanyu (`lynx 192.207.3.3`). Dalam soal ini kami menemukan permasalahan yang sama dengan nomor 11, di mana `lynx 192.207.3.3` tidak memunculkan apa-apa, sementara `lynx 192.207.3.3/home.html` memunculkan pesan "Akulah Abimanyu".
+Untuk testing, lakukan lynx IP address Abimanyu (`lynx 10.38.3.3`). Dalam soal ini kami menemukan permasalahan yang sama dengan nomor 11, di mana `lynx 10.38.3.3` tidak memunculkan apa-apa, sementara `lynx 10.38.3.3/home.html` memunculkan pesan "Akulah Abimanyu".
 
-`lynx 192.207.3.3`<br>
+`lynx 10.38.3.3`<br>
 
 
-`lynx 192.212.3.3/home.html`<br>
+`lynx 10.38.3.3/home.html`<br>
 
 
 ## Soal 20
@@ -1393,71 +1393,71 @@ Karena website **www.parikesit.abimanyu.yyy.com** semakin banyak pengunjung dan 
 ### Jawaban
 Pertama jalankan comman `a2enmod rewrite` untuk mengaktifkan module rewrite.
 
-Buat file `.htaccess` pada direktori `/var/www/parikesit.abimanyu.e12/` dan isi dengan konfigurasi berikut.
+Buat file `.htaccess` pada direktori `/var/www/parikesit.abimanyu.e03/` dan isi dengan konfigurasi berikut.
 ```
 echo '
 RewriteEngine On
 RewriteCond %{REQUEST_URI} ^/public/images/(.*)abimanyu(.*)
 RewriteCond %{REQUEST_URI} !/public/images/abimanyu.png
-RewriteRule abimanyu http://parikesit.abimanyu.e02.com/public/images/abimanyu.png$1 [L,R=301]' > /var/www/parikesit.abimanyu.e02/.htaccess
+RewriteRule abimanyu http://parikesit.abimanyu.e03.com/public/images/abimanyu.png$1 [L,R=301]' > /var/www/parikesit.abimanyu.e03/.htaccess
 ```
 
 Kemudian tambahkan
 
 ```
-<Directory /var/www/parikesit.abimanyu.e12>
+<Directory /var/www/parikesit.abimanyu.e03>
         Options +FollowSymLinks -Multiviews
         AllowOverride All
 </Directory>
 ```
 
-pada file `/etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf` seperti berikut.
+pada file `/etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf` seperti berikut.
 
 ```
 echo '
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
-  DocumentRoot /var/www/parikesit.abimanyu.e02
+  DocumentRoot /var/www/parikesit.abimanyu.e03
 
-  ServerName parikesit.abimanyu.e02.com
-  ServerAlias www.parikesit.abimanyu.e02.com
+  ServerName parikesit.abimanyu.e03.com
+  ServerAlias www.parikesit.abimanyu.e03.com
 
-  <Directory /var/www/parikesit.abimanyu.e02/public>
+  <Directory /var/www/parikesit.abimanyu.e03/public>
           Options +Indexes
   </Directory>
 
-  <Directory /var/www/parikesit.abimanyu.e02/secret>
+  <Directory /var/www/parikesit.abimanyu.e03/secret>
           Options -Indexes
   </Directory>
 
-  <Directory /var/www/parikesit.abimanyu.e02>
+  <Directory /var/www/parikesit.abimanyu.e03>
           Options +FollowSymLinks -Multiviews
           AllowOverride All
   </Directory>
 
-  Alias "/public" "/var/www/parikesit.abimanyu.e02/public"
-  Alias "/secret" "/var/www/parikesit.abimanyu.e02/secret"
-  Alias "/js" "/var/www/parikesit.abimanyu.e02/public/js"
+  Alias "/public" "/var/www/parikesit.abimanyu.e03/public"
+  Alias "/secret" "/var/www/parikesit.abimanyu.e03/secret"
+  Alias "/js" "/var/www/parikesit.abimanyu.e03/public/js"
 
   ErrorDocument 404 /error/404.html
   ErrorDocument 403 /error/403.html
 
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e02.com.conf
+</VirtualHost>' > /etc/apache2/sites-available/parikesit.abimanyu.e03.com.conf
 
 service apache2 restart
 ```
 
 Untuk testing, lakukan command-command berikut.
 
-`lynx parikesit.abimanyu.e02.com/public/images/not-abimanyu.png`
+`lynx parikesit.abimanyu.e03.com/public/images/not-abimanyu.png`
 
-`lynx parikesit.abimanyu.e02.com/public/images/abimanyu-student.jpg`
+`lynx parikesit.abimanyu.e03.com/public/images/abimanyu-student.jpg`
 
-`lynx parikesit.abimanyu.e02.com/public/images/abimanyu.png`
+`lynx parikesit.abimanyu.e03.com/public/images/abimanyu.png`
 
-`lynx parikesit.abimanyu.e02.com/public/images/notabimanyujustmuseum.177013`
+`lynx parikesit.abimanyu.e03.com/public/images/notabimanyujustmuseum.177013`
 
 
 
