@@ -67,15 +67,16 @@ YudhistiraDNSMaster
 
 WisanggeniWebServer
 
-![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%20(3).png)
 
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%20(8).png)
 
 AbimanyuWebServer
 
+
 ![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%20(7).png)
 
-
 PrabukusumaWebServer
+
 
 ![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%20(6).png)
 
