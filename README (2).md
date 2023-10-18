@@ -268,7 +268,7 @@ service bind9 restart
 Lakukan `ping parikesit.abimanyu.e03.com -c 5` pada NakulaClient
 
 
-
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2014.png)
 
 
 ## Soal 5
@@ -389,12 +389,14 @@ Atur `service bind9` pada YudhistiraDNSMaster
 
 Lakukan `ping arjuna.e03.com -c 5` pada NakulaClient
 
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2012.png)
 
 
 
 
 Lakukan `ping www.arjuna.e03.com` pada NakulaClient
 
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2012.png)
 
 
 
