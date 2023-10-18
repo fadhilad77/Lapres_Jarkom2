@@ -50,6 +50,7 @@
 ## Topologi
 
 
+![topologi](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/01.png)
 ## Configure
 Router
 
@@ -103,15 +104,12 @@ NakulaClient
 
 Lakukan `ping google.com -c 5` pada NakulaClient
 
-Hasil 
-
 
 
 SadewaClient
 
 Lakukan `ping google.com -c 5` pada SadewaClient
 
-Hasil
 
 
 
@@ -166,13 +164,13 @@ Gunakan IP Node Yudhistira dengan `nano /etc/resolv.conf` pada NakulaClient
 
 Lakukan `ping arjuna.e03.com -c 5` pada NakulaClient  
 
-Hasil
+
 
 
 
 Lakukan `ping www.arjuna.e03.com -c 5` pada NakulaClient  
 
-Hasil
+
 
 
 
@@ -227,13 +225,13 @@ Gunakan IP Node Yudhistira dengan `nano /etc/resolv.conf` pada NakulaClient
 
 Lakukan `ping abimanyu.e03.com -c 5` pada NakulaClient
 
-Hasil
+
 
 
 
 Lakukan `ping www.abimanyu.e03.com -c 5` pada NakulaClient
 
-Hasil
+
 
 
 
@@ -272,7 +270,7 @@ service bind9 restart
 
 Lakukan `ping parikesit.abimanyu.e03.com -c 5` pada NakulaClient
 
-Hasil
+
 
 
 
@@ -320,7 +318,7 @@ Lakukan pengecekan pada addres yang dimiliki abimanyu
 
 Lakukan `host -t PTR 10.38.3.3` pada NakulaClient
 
-Hasil
+
 
 
 
@@ -388,19 +386,19 @@ service bind9 restart
 
 Atur `service bind9` pada YudhistiraDNSMaster
 
-Hasil
+
 
 
 
 Lakukan `ping arjuna.e03.com -c 5` pada NakulaClient
 
-Hasil
+
 
 
 
 Lakukan `ping www.arjuna.e03.com` pada NakulaClient
 
-Hasil
+
 
 
 
@@ -564,19 +562,19 @@ service bind9 restart
 
 Lakukan `ping baratayuda.abimanyu.e03.com` pada Nakulaclient
 
-Hasil
+
 
 
 
 Lakukan `ping www.baratayuda.abimanyu.e03.com` pada Nakulaclient
 
-Hasil
+
 
 
 
 Lakukan `host -t CNAME www.baratayuda.abimanyu.e03.com` pada Nakulaclient
 
-Hasil
+
 
 
 
@@ -613,13 +611,13 @@ service bind9 restart
 
 Lakukan `ping rjp.baratayuda.abimanyu.e03.com` pada Nakulaclient
 
-Hasil
+
 
 
 
 Lakukan `ping www.rjp.baratayuda.abimanyu.e03.com -c 5 ` pada NakulaClient
 
-Hasil
+
 
 
 
