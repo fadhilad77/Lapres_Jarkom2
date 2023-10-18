@@ -225,14 +225,12 @@ Gunakan IP Node Yudhistira dengan `nano /etc/resolv.conf` pada NakulaClient
 Lakukan `ping abimanyu.e03.com -c 5` pada NakulaClient
 
 
-
-
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2013.png)
 
 Lakukan `ping www.abimanyu.e03.com -c 5` pada NakulaClient
 
 
-
-
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2013.png)
 
 ## Soal 4
 Kemudian, karena terdapat beberapa web yang harus di-deploy, buatlah subdomain **parikesit.abimanyu.yyy.com** yang diatur DNS-nya di Yudhistira dan mengarah ke Abimanyu.
