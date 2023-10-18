@@ -52,6 +52,8 @@
 
 ## Configure
 Router
+
+
 ![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023.png)
 
 WerkudaraDNSSlave
