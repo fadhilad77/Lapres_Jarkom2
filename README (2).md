@@ -1,8 +1,8 @@
-# Jarkom-Modul-2-E02-2023
+# Jarkom-Modul-2-E03-2023
 
 ## Anggota Kelompok
 - Shaloom David Togu (5025211242)
-
+- M Fadhil Abhista Daniswara (5025221208)
 ## Daftar Isi
 - [Topologi](#topologi)
 - [Configure](#configure) 
