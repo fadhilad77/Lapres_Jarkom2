@@ -112,7 +112,7 @@ SadewaClient
 Lakukan `ping google.com -c 5` pada SadewaClient
 
 
-
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2010.png)
 
 ## Soal 2
 Buatlah website utama pada node arjuna dengan akses ke **arjuna.yyy.com** dengan alias **www.arjuna.yyy.com** dengan yyy merupakan kode kelompok.
