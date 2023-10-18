@@ -79,7 +79,7 @@ AbimanyuWebServer
 PrabukusumaWebServer
 
 
-![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%20(6).png)
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%207.png)
 
 ArjunaLoadBalancer
 
