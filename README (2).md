@@ -165,15 +165,13 @@ Gunakan IP Node Yudhistira dengan `nano /etc/resolv.conf` pada NakulaClient
 
 Lakukan `ping arjuna.e03.com -c 5` pada NakulaClient  
 
-
-
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2012.png)
 
 
 Lakukan `ping www.arjuna.e03.com -c 5` pada NakulaClient  
 
 
-
-
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%2012.png)
 
 ## Soal 3
 Dengan cara yang sama seperti soal nomor 2, buatlah website utama dengan akses ke **abimanyu.yyy.com** dan alias **www.abimanyu.yyy.com**.
