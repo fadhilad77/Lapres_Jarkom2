@@ -105,6 +105,7 @@ NakulaClient
 Lakukan `ping google.com -c 5` pada NakulaClient
 
 
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%209.png)
 
 SadewaClient
 
