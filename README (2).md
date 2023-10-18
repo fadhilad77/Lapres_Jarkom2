@@ -60,7 +60,7 @@ Router
 WerkudaraDNSSlave
 
 
-![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%20(3).png)
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%204.png)
 YudhistiraDNSMaster
 
 
