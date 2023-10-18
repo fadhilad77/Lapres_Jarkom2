@@ -562,12 +562,13 @@ service bind9 restart
 Lakukan `ping baratayuda.abimanyu.e03.com` pada Nakulaclient
 
 
-
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-3-E02-2023%2015.png)
 
 
 Lakukan `ping www.baratayuda.abimanyu.e03.com` pada Nakulaclient
 
 
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-3-E02-2023%2015.png)
 
 
 
