@@ -89,7 +89,7 @@ ArjunaLoadBalancer
 SadewaClient
 
 
-![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%20(2).png)
+![router](https://github.com/fadhilad77/Lapres_Jarkom2/blob/main/Jarkom-Modul-2-E03-2023%203.png)
 
 Nakula Client
 
